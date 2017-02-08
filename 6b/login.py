@@ -87,4 +87,4 @@ if __name__ == '__main__':
     db.create_all()
     if User.query.filter_by(username='john').first() is None:
         User.register('john', 'cat')
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=8080)
